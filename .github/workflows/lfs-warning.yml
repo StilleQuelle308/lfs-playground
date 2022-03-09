@@ -18,8 +18,8 @@ jobs:
   checklfs:
     runs-on: ubuntu-latest
     steps:
-      - uses: StilleQuelle308/lfs-warning@latest
+      - uses: actionsdesk/lfs-warning@v3.1
         with:
-          filesizelimit: 100KB
+          filesizelimit: 1mb
           exclusionPatterns: |
             **/*.png
