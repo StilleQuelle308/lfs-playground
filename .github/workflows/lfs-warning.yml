@@ -5,7 +5,7 @@ name: LFS-Warnings
 # Controls when the workflow will run
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -15,6 +15,11 @@ jobs:
   checklfs:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
       - uses: actionsdesk/lfs-warning@v3.1
         with:
           filesizelimit: 1mb
