@@ -17,8 +17,8 @@ jobs:
           lfs: true
       - name: Checkout LFS objects
         run: git lfs checkout
-      - uses: actionsdesk/lfs-warning@v3.1
+      - uses: StilleQuelle308/lfs-warning@v3.1.1
         with:
-          filesizelimit: 1mb
+          filesizelimit: 500kb
           exclusionPatterns: |
             **/*.png
