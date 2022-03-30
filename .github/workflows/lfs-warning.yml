@@ -22,5 +22,5 @@ jobs:
           filesizelimit: 500kb
           exclusionPatterns: |
             **/*.png
-          binaryPatterns: |
+          inclusionPatterns: |
             **/*.svg
