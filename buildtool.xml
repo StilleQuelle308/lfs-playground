@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+  	<groupId>tools</groupId>
+  	<artifactId>buildtool</artifactId>
+
+	<dependencies>
+		<!-- This is the primary JDK used for (almost) everything -->
+		<!-- It can be referenced using the ${JAVA_HOME} or ${JAVA_HOME_8} environment variables -->
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>zulujdk</artifactId>
+			<version>8.46.0.21-${os.platform}</version>
+			<env>JAVA_HOME_8</env>
+		</dependency>
+
+		<!-- This is the secondary JDK used (currently) only for building the provtools/ptools module
+		   It can be referenced using the ${JAVA_HOME2} or ${JAVA_HOME_11} environment variables, see
+		   <codelineRoot>/base/provtools/ptools/pom.xml for a usage example
+		-->
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>zulujdk</artifactId>
+			<version>11.39.17-${os.platform}</version>
+			<env>JAVA_HOME_11</env>
+		</dependency>
+		
+		<!-- use PPM specific ANT distibution -->
+		<dependency>
+			<groupId>com.aris.ppm.tools</groupId>
+			<artifactId>ant</artifactId>
+			<version>1.9.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>maven</artifactId>
+			<version>3.6.3q</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>nodejs</artifactId>
+			<version>12.13.1p-${os.platform}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>phantomjs</artifactId>
+			<version>2.1.1-windows</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aris.tools</groupId>
+			<artifactId>devtools</artifactId>
+			<version>99.0.0.0-trunk-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+</project>
